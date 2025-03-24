@@ -25,7 +25,7 @@ WORKDIR /app
 # Copy built files from the builder stage
 COPY --from=builder /app .
 
-# Expose port 80
+# Expose port 5173
 EXPOSE 5173
 
 # Start frontend

@@ -9,6 +9,8 @@ services:
       - "5173:5173"
     networks:
       - compose-network
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:5050
 
   backend:
     build:
@@ -20,8 +22,8 @@ services:
       - mongodb
     networks:
       - compose-network
-    # environment:
-    #   - MONGO_URI=mongodb://mongodb:27017/mern-db
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/mydatabase
 
   mongodb:
     image: mongo:latest
