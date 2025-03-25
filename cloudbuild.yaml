@@ -17,7 +17,7 @@ steps:
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['tag', 'backend-image', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
-    id: 'tag frontend image'
+    id: 'tag backend image'
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
