@@ -22,3 +22,6 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
     id: 'push backend image'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
