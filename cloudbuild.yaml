@@ -1,0 +1,24 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'frontend-image', './frontend']
+    id: 'build frontend docker image'
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['tag', 'frontend-image', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend']
+    id: 'tag frontend image'
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend']
+    id: 'push frontend image'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'backend-image', './backend']
+    id: 'build bakcend docker image'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['tag', 'backend-image', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend']
+    id: 'tag frontend image'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend']
+    id: 'push backend image'
