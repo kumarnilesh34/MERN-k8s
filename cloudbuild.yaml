@@ -4,11 +4,11 @@ steps:
     id: 'build frontend docker image'
   
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['tag', 'frontend-image', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend-image']
+    args: ['tag', 'frontend-image', 'us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend-image']
     id: 'tag frontend image'
   
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend-image']
+    args: ['push', 'us-central1-docker.pkg.dev/app-development-446013/mern-k8s/frontend-image']
     id: 'push frontend image'
 
   - name: 'gcr.io/cloud-builders/docker'
@@ -16,11 +16,11 @@ steps:
     id: 'build bakcend docker image'
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['tag', 'backend-image', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
+    args: ['tag', 'backend-image', 'us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
     id: 'tag backend image'
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
+    args: ['push', 'us-central1-docker.pkg.dev/app-development-446013/mern-k8s/backend-image']
     id: 'push backend image'
 
 options:
