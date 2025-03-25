@@ -16,5 +16,5 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 5050
 
-# Define the command to run the application
+# Define the command to run the applications
 CMD ["npm", "start"]
