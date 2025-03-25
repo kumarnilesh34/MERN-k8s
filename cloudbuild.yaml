@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'frontend-image', './frontend']
+    args: ['build', '-t', 'frontend-image', './mern/frontend']
     id: 'build frontend docker image'
   
   - name: 'gcr.io/cloud-builders/docker'
@@ -12,7 +12,7 @@ steps:
     id: 'push frontend image'
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'backend-image', './backend']
+    args: ['build', '-t', 'backend-image', './mern/backend']
     id: 'build bakcend docker image'
 
   - name: 'gcr.io/cloud-builders/docker'
